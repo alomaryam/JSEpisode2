@@ -17,11 +17,21 @@
 * - It returns an empty array if it gets passed nothing:
 *       pairs() returns []
 ****************************************************************/
-function pairs(names) {
-  // Your code goes here
-}
 
-module.exports = pairs;
+let RandomizedPairing = [];
+
+function pairs (names){
+while (names.length>1){
+RandomizedPairing.push([names.getRandom(),names.getRandom()]);
+}
+if (names.length===1){
+RandomizedPairing.push([names.pop()]);
+}
+return RandomizedPairing;
+};
+
+
+
 
 /**********************************************
 * READ ME!!!!
@@ -38,7 +48,7 @@ module.exports = pairs;
 * console.log(numbers);  // [1, 2, 4] (missing the random element)
 ************************************************/
 Array.prototype.getRandom = function () {
-  return this.splice(Math.floor(Math.random()*this.length), 1)[0];
+return this.splice(Math.floor(Math.random()*this.length), 1)[0];
 }
 
 console.log(pairs(['Asis', 'Hamsa', 'Fawas', 'Mishmish', 'Hussein', 'Lailz', 'Mr Potato']));
