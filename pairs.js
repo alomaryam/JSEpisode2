@@ -30,6 +30,7 @@ RandomizedPairing.push([names.pop()]);
 return RandomizedPairing;
 };
 
+module.exports = pairs;
 
 
 
